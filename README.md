@@ -2,7 +2,7 @@
 # Generating Data Sets to Emulate Dynamic Traffic in a Backbone IP over Optical Network
 Siqi Liu, and Zuqing Zhu<br>
 School of Information Science and Technology, 
-University of Science and Technology of China, Hefei, China
+University of Science and Technology of China, Hefei, China<br>
 Email: lsq93325@mail.ustc.edu.cn, zqzhu@ieee.org
 ## Introduction
 A backbone IP over optical network usually consists of two layers, i.e., an IP layer and an optical layer. The optical layer is built with a few optical switches interconnected by fiber links. Each optical switch can transparently switch the optical spectrum of a lightpath from an input port to the desired output port. The switches in the IP layer are co-located with the underlying optical switches and connect to them with optical ports, each of which can generate or terminate the optical signal of a lightpath.
