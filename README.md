@@ -8,7 +8,8 @@ Based on this fact, we believe traffic fluctuations in backbone network are not 
 
 Here, we offer some websites that share traffic statistics of access link:
 
-
+|          |                  |          |          |          |
+| :--------| :--------------- | :--------| :--------| :--------|
 | 1. [SwissiX] | 2. [n-ix] | 3. [lonap]|4. [linx]|5. [cuhk] |
 |6. [nyiix-LA] | 7. [nyiix-NY]| 8. [bcix]|9. [ams-ix]|10. [USTC] |
 
@@ -49,7 +50,9 @@ Thus, we composite the traffic by enlonging the original pattern, shifting their
 
 w is randomly selected weight assigned to each trace. shift(trace,s) is the function that cyclic shifts s elements in trace. The specific parameter are listed in the following table:    
 
-| :--------| :-------- | :--------| :--------| :--------|:--------|
+
+|          |           |          |          |          |         |
+| :--------| :-------- | :--------| :--------| :--------| :-------|
 | W        |         1 |        2 |        3 |        4 |       5 |
 | value    |           |          |          |          |         |
 | W        |         6 |        7 |        8 |        9 |       10|
@@ -57,7 +60,7 @@ w is randomly selected weight assigned to each trace. shift(trace,s) is the func
 | W        |         11|        12|       13 |       14 |         |
 | value    |           |          |          |          |         |
 
-
+|          |           |          |          |          |         |
 | :--------| :-------- | :--------| :--------| :--------|:--------|
 | s        |         1 |        2 |        3 |        4 |       5 |
 | value    |           |          |          |          |         |
