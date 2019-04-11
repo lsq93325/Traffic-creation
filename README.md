@@ -1,5 +1,5 @@
 
-# Generating Data Sets to Emulate Dynamic Traffic in a Backbone IP over Optical Network
+# Generating Data Set to Emulate Dynamic Traffic in a Backbone IP over Optical Network
 Siqi Liu, and Zuqing Zhu<br>
 School of Information Science and Technology, 
 University of Science and Technology of China, Hefei, China<br>
@@ -45,7 +45,7 @@ The realistic traffic traces above indicate that the aggregated traffic collecte
 For the 14 traces mentioned above, we use the following procedure to generate the data set to emulate dynamic traffic on aggregated flows in a backbone IP over optical network.
 
 1.	We preprocess the data of each trace to make sure: 1) the sampling interval is 5 minutes, 2) the value of each sample is normalized such that the peak value of its trace is set to 1, and 3) each trace covers tens of weeks.
-2.	For the data set to represent the traffic of an aggregated flow, we randomly choose sample segments from 5 to 10 preprocessed traces, multiple each of them by a random weight in (0, 1), shift the weighted samples in the time domain for \[0, 6\] hours randomly (to emulate traffic from different time-zones), and add the results together and normalize them to obtain a segment of the traffic on an aggregated flow. Then, we repeat the procedure to get the whole traffic data of an aggregated flow, which consists of 50,000 traffic samples.
+2.	For the data set to represent the traffic of an aggregated flow, we randomly choose sample segments from 5 to 10 preprocessed traces, multiply each of them by a random weight in (0, 1), shift the weighted samples in the time domain for \[0, 6\] hours randomly (to emulate traffic from different time-zones), and add the results together and normalize them to obtain a segment of the traffic on an aggregated flow. Then, we repeat the procedure to get the whole traffic data of an aggregated flow, which consists of 50,000 traffic samples.
 3.	We repeat Step 2 for 10 times to generate the traffic traces for 10 aggregated flows in a backbone IP over optical network, which includes 500,000 traffic samples in total.
 
 The generated traffic data set is attached, and an example on the generated traffic is shown in the figure below.
