@@ -65,7 +65,7 @@ The generated traffic data set is attached, and an example on the generated traf
 
 ## References:
 
-\[1\] S. Bhattacharyya, C. Diot, and J. Jetcheva, “Pop-level and access-link-level traffic dynamics in a Tier-1 POP,” in Proc. of ACM SIGCOMM IMW 2001, pp. 39–53, Nov. 2001.
+\[1\] S. Bhattacharyya, C. Diot, and J. Jetcheva, “Pop-level and access-link-level traffic dynamics in a Tier-1 POP,” in Proc. of ACM SIGCOMM IMW 2001, pp. 39–53, Nov. 2001.<br>
 \[2\] N. Laoutaris, M. Sirivianos, X. Yang, and P. Rodriguez, “Inter-datacenter bulk transfers with netstitcher,” in Proc. of ACM SIGCOMM 2011, pp. 74–85, Aug. 2011.
 
 
