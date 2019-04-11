@@ -1,12 +1,17 @@
-# Ingredient
 
+# Generating Data Sets to Emulate Dynamic Traffic in a Backbone IP over Optical Network
+Siqi Liu, and Zuqing Zhu
+School of Information Science and Technology, 
+University of Science and Technology of China, Hefei, China
+Email: lsq93325@mail.ustc.edu.cn, zqzhu@ieee.org
+## Introduction
+A backbone IP over optical network usually consists of two layers, i.e., an IP layer and an optical layer. The optical layer is built with a few optical switches interconnected by fiber links. Each optical switch can transparently switch the optical spectrum of a lightpath from an input port to the desired output port. The switches in the IP layer are co-located with the underlying optical switches and connect to them with optical ports, each of which can generate or terminate the optical signal of a lightpath.
 
-Traffics in backbone network are different from single flows in LAN. Aggregated flows in backbone network show some specific patterns. In backbone network, an edge router may have several access links. Each link serves institutions like school and enterprise or even an ISP.
-This means the flow entering backbone network are aggregation of massive connections.The traffic pattern of each flow is also determined by the behavior of access link users.
+To analyze the performance of service provisioning algorithms for an aforementioned multilayer backbone network, one need realistic traffic data sets to emulate the traffic generated in the IP layer. Therefore, the purpose of this technical report is to share our insight and method to accomplish such a task. Moreover, we also attach a data set that consists of 500,000 traffic samples generated with realistic traffic traces.
 
-Based on this fact, we believe traffic fluctuations in backbone network are not totally random and can be predicted. Note that a flow in backbone network is a mixture of small flows aggregated by access link. Thus for one single backbone edge router, the flows coming out of it are different from each other. Thus to emulate the traffic pattern of flow in backbone network, we have to collect sufficient ingredients, i.e., the small flow of access link.
+## Realistic Traffic Traces from the Internet
+Note that, in a backbone IP over optical network, a “flow” usually refers to an aggregated one that grooms numerous IP flows between a switch pair in the IP layer. Hence, the traffic on each flow could be highly dynamic, fluctuate with a unique pattern [1], and last for a reasonably long period (e.g., tens of hours or even days). Meanwhile, there can be multiple such flows between a switch pair. Therefore, to generate the traffic on a flow, we need to leverage the realistic traffic traces collected on an edge router, which aggregates the traffic from the access networks behind it. Here, the access networks can be those for universities, research institutions, enterprises, or even Internet service providers (ISPs). To this end, we surveyed the related data on the Internet, and found the following proper sources for the realistic traffic traces. Some of the traces share certain similar patterns, but they also have significant difference among each other. We also hope to point out that the traces on these websites are for real-time traffic and will be updated every a few minutes.
 
-Here, we offer some websites that share traffic statistics of access link:
 
 |          |                  |          |          |          |
 | :--------| :--------------- | :--------| :--------| :--------|
@@ -14,63 +19,95 @@ Here, we offer some websites that share traffic statistics of access link:
 |6. [nyiix-LA] | 7. [nyiix-NY]| 8. [bcix]|9. [ams-ix]|10. [USTC] |
 
 
+## Characteristics of Traffic Traces
+All the realistic traffic traces considered in this report has relatively strong self-similarity. They fluctuate with time and all show daily variation patterns, each of which has peak/off-peak hours in a day. However, how and when each traffic trace reaches its peak/off-peak hours can be unique and change day by day. We will elaborate on their characteristics as follows.
 
-These traffic patterns share some similarity, and yet they are different from each other. Next, we discuss the pattern of these traffics. Note that these website will update the statistics every several minutes.
-
-# Characters of Traffic Patterns 
-1. Traffic patterns are given in those website. As they claim, the graphs are plotted by averaging the transmitted bits in the past 5 minutes.This gives us fine grained traffic fluctuation.
-
-2. All of the traffic patterns has relatively strong self-similarity. They they fluctuate as time goes by. They all shows daily variation that experiences traffic peak and valley in one day. However, how and when the traffic reach it peak/valley are different from each other.And then we will discuss the features in detial.
 
 | ID  |  Traffic Pattern | Features |
 | :--------| :---------------: | :--------|
-|1| ![pat01](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-01.JPG)|1. Peak time: 4:30; *counter intuitive*<br> 2. Valley time:12:30; <br> 3. Valley / Peak = 0.25; <br> 4. Sharp peak on a platform around 1.5 Gbps (half the peak) <br> 5. Slowly decrease after the peak hour;<br>6. URL: [linx]|
-|2|![pat02](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-02.JPG)|1. Peak time: 3:30; *counter intuitive*<br> 2. Valley time: 13:30; <br> 3. Valley / Peak = 0.4; <br> 4. The peak is not evident since the fluctuation is not fiece; <br> 5. the traffic stay at high level (80% of peak value) for 14 hours;<br>6. URL: [linx]|
-|3|![pat03](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-03.JPG)|1. Peak time: 5:30; *counter intuitive*<br> 2. Valley time: 16:30; <br> 3. Valley / Peak = 0.04; <br> 4. There are two peaks in one day, the bigger one at 5:50, the smaller at 20:30; <br> 5. the traffic are bursty, evident spikes occurs anytime;<br>6. URL: [linx]|
-|4|![pat04](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-04.JPG)|1. Peak time: 22:00; <br> 2. Valley time: 4:30; <br> 3. Valley / Peak = 0.16; <br> 4. From valley to peak, traffic first increases fast. Then at 10:00 it begins to increase slowly until reach the peak at 22:00; <br> 5. From peak to valley, it decrease sharply;<br>6. URL: [ams-ix-grx]|
-|5|![pat05](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-05.JPG)|1. Peak time: 14:00; <br> 2. Valley time: 4:00; <br> 3. Valley / Peak = 0.20; <br> 4. Intensive small spikes are everywhere, while a big spike seems to occur randomly; <br> 5. From peak to valley, it decrease sharply;<br>6. URL: [ams-ix-nbip]|
-|6|![pat06](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-06.JPG)|1. Peak time: 21:00; <br> 2. Valley time: 4:00; <br> 3. Valley / Peak = 0.42; <br> 4. Traffic slowly increases for about 18 hours and steeply decreases for about 6 hours; <br> 5. The spike before peak hour makes the traffic experience a small fluctuation;<br>6. URL: [ams-ix-ipv6]|
-|7|![pat07](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-07.JPG)|1. Peak time: 14:00; <br> 2. Valley time: 5:00; <br> 3. Valley / Peak = 0.3; <br> 4. Traffic slowly increases the traffic for about 17 hours and steeply decreases for about 7 hours; <br> 5. The traffic first increases to a platform and stays for about 6 hours, then it sharply increases to the peak with in about 3 hours;<br>6. URL: [SwissiX]|
-|8|![pat08](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-08.JPG)|1. Peak time: 9:00; <br> 2. Valley time: 14:00; <br> 3. Valley / Peak = 0.8; <br> 4. Traffic almost stay steady throughout a day; <br> 5. There are two peaks in this pattern, but they not so obvious;<br>6. URL: [bcix]|
-|9|![pat09](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-09.JPG)|1. Peak time: 16:00; <br> 2. Valley time: 4:00; <br> 3. Valley / Peak = 0.5; <br> 4. Traffic almost stay steady throughout a day; <br> 5. There are one obvious valley and no obvious peak;<br>6. URL: [nyiix-NY]|
-|10|![pat10](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-10.JPG)|1. Peak time: 9:00; <br> 2. Valley time: 4:00; <br> 3. Valley / Peak = 0.6; <br> 4. Traffic almost stay steady throughout a day; <br> 5. There are two peaks but the peaks are not obvious;<br>6. URL: [nyiix-LA]|
-|11|![pat11](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-11.JPG)|1. Peak time: 22:00; <br> 2. Valley time: 4:00; <br> 3. Valley / Peak = 0.27; <br> 4. Traffic fluctuates within a large range; <br> 5. Traffic stays over 50% of peak value for over 17 hours;<br>6. URL: [cuhk]|
-|12|![pat12](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-12.JPG)|1. Peak time: 21:00; <br> 2. Valley time: 5:00; <br> 3. Valley / Peak = 0.29; <br> 4. When trafic increasing, there is a platform and the hight of the platform is about 87% of peak value; <br> 5. There occur "random" samll spike druing the valley and the platform stage;<br>6. URL: [lonap]|
-|13|![pat13](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-13.JPG)|1. Peak time: 22:00; <br> 2. Valley time: 6:00; <br> 3. Valley / Peak = 0.60; <br> 4. The traffic rise and fall for three times in a day<br> 5. A small and sundden increase occures before the valley;<br>6. URL: [n-ix]|
-|14|![pat14](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-14.JPG)|1. Peak time: 15:00; <br> 2. Valley time: 4:00; <br> 3. Valley / Peak = 0.40; <br> 4. The traffic have three main spikes. These spike stay close to each other. This first two experience sudden rises and fall while the last rise and fall slowly ;<br> 5. URL: [USTC]|
+|1| ![pat01](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-01.JPG)|1. Peak time: 4:30; <br> 2. Valley time:12:30; <br> 3. Valley / Peak = 0.25; <br> 4. Sharp peak and slow decrease afterwards;<br> 5. URL: [linx]|
+|2|![pat02](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-02.JPG)|1. Peak time: around 3:30 am;<br> 
+2. Off-peak time: around 1:30 pm; <br> 
+3. Valley-to-peak ratio: 0.4;<br> 
+4. Peak hours last for around 14 hours;<br> 
+5. URL: [linx]|
+|3|![pat03](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-03.JPG)|1. Peak time: around 5:30 am and 8:30 pm;<br> 
+2. Off-peak time: around 4:30 pm; <br> 
+3. Valley-to-peak ratio: 0.04;<br> 
+4. Bursty traffic with two major peaks in a day;<br> 
+5. URL: [linx]|
+|4|![pat04](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-04.JPG)|1. Peak time: around 10:00 pm;<br>  
+2. Off-peak time: around 4:30 am; <br> 
+3. Valley-to-peak ratio: 0.16;<br> 
+4. From valley to peak, traffic first increases fast and then slowly; from peak to valley, it decreases sharply;<br> 
+5. URL: [ams-ix-grx]|
+|5|![pat05](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-05.JPG)|1. Peak time: around 2:00 pm; <br> 
+2. Off-peak time: around 4:00 am; <br> 
+3. Valley-to-peak ratio: 0.20;<br> 
+4. Bursty traffic with major peaks occurring randomly in a day;<br> 
+5. URL: [ams-ix-nbip]|
+|6|![pat06](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-06.JPG)|1. Peak time: around 9:00 am;<br>  
+2. Off-peak time: around 4:00 am; <br> 
+3. Valley-to-peak ratio: 0.42;<br> 
+4. Traffic slowly increases for around 18 hours and then decreases sharply for around 6 hours;<br> 
+5. URL: [ams-ix-ipv6]|
+|7|![pat07](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-07.JPG)|1. Peak time: around 2:00 pm;<br>  
+2. Off-peak time: around 5:00 am; <br> 
+3. Valley-to-peak ratio: 0.3;<br> 
+4. Traffic slowly increases for around 17 hours and then decreases sharply for around 7 hours; <br> 
+5. URL: [SwissiX]|
+|8|![pat08](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-08.JPG)|1. Peak time: around 9:00 am; <br> 
+2. Off-peak time: around 2:00 pm; <br> 
+3. Valley-to-peak ratio: 0.8; <br> 
+4. Traffic slowly increases for around 15 hours and then decreases sharply for around 7 hours;<br> 
+5. URL: [bcix]|
+|9|![pat09](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-09.JPG)|1. Peak time: around 4:00 pm; <br> 
+2. Off-peak time: around 4:00 am; <br> 
+3. Valley-to-peak ratio: 0.5; <br> 
+4. Traffic stay steady throughout a day with one valley;<br> 
+5. URL: [nyiix-NY]|
+|10|![pat10](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-10.JPG)|1. Peak time: around 9:00 am; <br> 
+2. Off-peak time: around 4:00 am; <br> 
+3. Valley-to-peak ratio: 0.6; <br> 
+4. Traffic stay steady throughout a day with two minor peaks;<br> 
+5. URL: [nyiix-LA]|
+|11|![pat11](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-11.JPG)|1. Peak time: around 10:00 pm; <br> 
+2. Off-peak time: around 4:00 am; <br> 
+3. Valley-to-peak ratio: 0.27; <br> 
+4. Traffic fluctuates largely throughout a day and stays at a high level for over 17 hours;<br> 
+5. URL: [cuhk]|
+|12|![pat12](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-12.JPG)|1. Peak time: around 9:00 pm; <br> 
+2. Off-peak time: around 5:00 am; <br> 
+3. Valley-to-peak ratio: 0.29; <br> 
+4. When traffic increasing, it stays at a flat level for a while and small spikes happens randomly; <br> 
+5. URL: [lonap]|
+|13|![pat13](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-13.JPG)|1. Peak time: around 10:00 pm; <br> 
+2. Off-peak time: around 6:00 am; <br> 
+3. Valley-to-peak ratio: 0.60; <br> 
+4. Small and sudden increases occur before traffic reaches its valley;<br> 
+5. URL: [n-ix]|
+|14|![pat14](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-14.JPG)|1. Peak time: around 3:00 pm; <br> 
+2. Off-peak time: around 4:00 am; <br> 
+3. Valley-to-peak ratio: 0.40; <br> 
+4. Traffic has three major peaks, which stay close to each other;<br> 
+5. URL: [USTC]|
 
-# Emulate Flow in Backbone network
-Through those patterns we can find that the traffic experience fluctuation everday, but Their charactors are different. Some of them reach their peak at night, while some at noon. Note that, such negative correlation can happen on one backbone link. When it comes to the network spread over several time-zones \[[1]\], the negative correlation will become more severe since the peak hour of different time zones are different. We collect 14 patterns, and considering the negative correlation could happens, we may shift one pattern by several time slots (Here, one slot stands for a 5-min sample) to make it more practical.
+## Generate Data Set to Emulate Backbone Traffic
+The realistic traffic traces above indicate that the aggregated traffic collected at an edge route experience daily fluctuation, but the fluctuation patterns of the traces may have negative correlation, i.e., the peak time of a trace is the off-peak time of another one, and vice versa. Furthermore, the negative correlation can also be caused by the fact that a backbone network covers multiple time-zones geographically, and traffic flows between different source-destination pairs might have different peak/off-peak hours \[1\]
 
-Also we consider scaling one pattern to another amplitude, which will not affact its traffic feature. Before we composite the emulated backbone traffic pattern, we may expand one traffic pattern in time domain. Specifically, for some traffic patterns performs almost the same for each day of a week, we enlong them by picking traffic of a random day and sticking the traffic right after the orinal pattern. In this way, the pattern will keep its original pattern. As for the patterns that has evidently weekly pattern, we enlong them by picking a random week and sticking the corresponding statistics to the end of original ones.
+For the 14 traces mentioned above, we use the following procedure to generate the data set to emulate dynamic traffic on aggregated flows in a backbone IP over optical network.
 
-Thus, we composite the traffic by enlonging the original pattern, shifting their peak hour and adding them together. Specifically,1) each pattern variates at 5-min basis, 2) we enlong them by randomly picking a day pattern or week pattern and appending to the end, 3) we shift them by a random time slot, 4) we add them together. We generate the traffic through the following equation:
+1.	We preprocess the data of each trace to make sure: 1) the sampling interval is 5 minutes, 2) the value of each sample is normalized such that the peak value of its trace is set to 1, and 3) each trace covers tens of weeks.
+2.	For the data set to represent the traffic of an aggregated flow, we randomly choose sample segments from 5 to 10 preprocessed traces, multiple each of them by a random weight in (0, 1), shift the weighted samples in the time domain for \[0, 6\] hours randomly (to emulate traffic from different time-zones), and add the results together and normalize them to obtain a segment of the traffic on an aggregated flow. Then, we repeat the procedure to get the whole traffic data of an aggregated flow, which consists of 50,000 traffic samples.
+3.	We repeat Step 2 for 10 times to generate the traffic traces for 10 aggregated flows in a backbone IP over optical network, which includes 500,000 traffic samples in total.
 
-![eq1](https://github.com/lsq93325/Traffic-creation/raw/master/image/eq.JPG)
+The generated traffic data set is attached, and an example on the generated traffic is shown in the figure below.
 
-w is randomly selected weight assigned to each trace. shift(trace,s) is the function that cyclic shifts s elements in trace. The specific parameter are listed in the following table:    
+## References:
 
+\[1\] S. Bhattacharyya, C. Diot, and J. Jetcheva, “Pop-level and access-link-level traffic dynamics in a Tier-1 POP,” in Proc. of ACM SIGCOMM IMW 2001, pp. 39–53, Nov. 2001.
+\[2\] N. Laoutaris, M. Sirivianos, X. Yang, and P. Rodriguez, “Inter-datacenter bulk transfers with netstitcher,” in Proc. of ACM SIGCOMM 2011, pp. 74–85, Aug. 2011.
 
-|          |           |          |          |          |         |
-| :--------| :-------- | :--------| :--------| :--------| :-------|
-| W        |         1 |        2 |        3 |        4 |       5 |
-| value    |           |          |          |          |         |
-| W        |         6 |        7 |        8 |        9 |       10|
-| value    |           |          |          |          |         |
-| W        |         11|        12|       13 |       14 |         |
-| value    |           |          |          |          |         |
-
-|          |           |          |          |          |         |
-| :--------| :-------- | :--------| :--------| :--------|:--------|
-| s        |         1 |        2 |        3 |        4 |       5 |
-| value    |           |          |          |          |         |
-| s        |         6 |        7 |        8 |        9 |       10|
-| value    |           |          |          |          |         |
-| s        |         11|        12|       13 |       14 |         |
-| value    |           |          |          |          |         |
-
-
-The emulated traffic pattern are shown in the following figure:
 
 
 
