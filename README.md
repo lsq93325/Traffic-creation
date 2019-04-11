@@ -8,8 +8,7 @@ Based on this fact, we believe traffic fluctuations in backbone network are not 
 
 Here, we offer some websites that share traffic statistics of access link:
 
-|          |                  |          |          |          |
-| :--------| :--------------- | :--------| :--------| :--------|
+
 | 1. [SwissiX] | 2. [n-ix] | 3. [lonap]|4. [linx]|5. [cuhk] |
 |6. [nyiix-LA] | 7. [nyiix-NY]| 8. [bcix]|9. [ams-ix]|10. [USTC] |
 
