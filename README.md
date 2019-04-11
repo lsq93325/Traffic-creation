@@ -1,6 +1,6 @@
 
 # Generating Data Sets to Emulate Dynamic Traffic in a Backbone IP over Optical Network
-Siqi Liu, and Zuqing Zhu
+Siqi Liu, and Zuqing Zhu<br>
 School of Information Science and Technology, 
 University of Science and Technology of China, Hefei, China
 Email: lsq93325@mail.ustc.edu.cn, zqzhu@ieee.org
