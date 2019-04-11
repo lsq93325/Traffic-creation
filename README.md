@@ -17,7 +17,7 @@ Here, we offer some websites that share traffic statistics of access link:
 
 These traffic patterns share some similarity, and yet they are different from each other. Next, we discuss the pattern of these traffics. Note that these website will update the statistics every several minutes.
 
-#Characters of Traffic Patterns 
+# Characters of Traffic Patterns 
 1. Traffic patterns are given in those website. As they claim, the graphs are plotted by averaging the transmitted bits in the past 5 minutes.This gives us fine grained traffic fluctuation.
 
 2. All of the traffic patterns has relatively strong self-similarity. They they fluctuate as time goes by. They all shows daily variation that experiences traffic peak and valley in one day. However, how and when the traffic reach it peak/valley are different from each other.And then we will discuss the features in detial.
