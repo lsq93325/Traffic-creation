@@ -13,7 +13,7 @@ To analyze the performance of service provisioning algorithms for an aforementio
 Note that, in a backbone IP over optical network, a “flow” usually refers to an aggregated one that grooms numerous IP flows between a switch pair in the IP layer. Hence, the traffic on each flow could be highly dynamic, fluctuate with a unique pattern \[1\], and last for a reasonably long period (e.g., tens of hours or even days). Meanwhile, there can be multiple such flows between a switch pair. Therefore, to generate the traffic on a flow, we need to leverage the realistic traffic traces collected on an edge router, which aggregates the traffic from the access networks behind it. Here, the access networks can be those for universities, research institutions, enterprises, or even Internet service providers (ISPs). To this end, we surveyed the related data on the Internet, and found the following proper sources for the realistic traffic traces. Some of the traces share certain similar patterns, but they also have significant difference among each other. We also hope to point out that the traces on these websites are for real-time traffic and will be updated every a few minutes.
 
 
-
+| :--------| :--------------- | :--------| :--------| :--------|
 | 1. [SwissiX] | 2. [n-ix] | 3. [lonap]|4. [linx]|5. [cuhk] |
 |6. [nyiix-LA] | 7. [nyiix-NY]| 8. [bcix]|9. [ams-ix]|10. [USTC] |
 
