@@ -27,70 +27,30 @@ All the realistic traffic traces considered in this report has relatively strong
 | :--------| :---------------: | :--------|
 |1| ![pat01](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-01.JPG)|1. Peak time: 4:30; <br> 2. Valley time:12:30; <br> 3. Valley / Peak = 0.25; <br> 4. Sharp peak and slow decrease afterwards;<br> 5. URL: [linx]|
 |2|![pat02](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-02.JPG)|1. Peak time: around 3:30 am;<br> 
-2. Off-peak time: around 1:30 pm; <br> 
-3. Valley-to-peak ratio: 0.4;<br> 
-4. Peak hours last for around 14 hours;<br> 
-5. URL: [linx]|
-|3|![pat03](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-03.JPG)|1. Peak time: around 5:30 am and 8:30 pm;<br> 
-2. Off-peak time: around 4:30 pm; <br> 
-3. Valley-to-peak ratio: 0.04;<br> 
-4. Bursty traffic with two major peaks in a day;<br> 
-5. URL: [linx]|
+2. Off-peak time: around 1:30 pm; <br> 3. Valley-to-peak ratio: 0.4;<br> 4. Peak hours last for around 14 hours;<br> 5. URL: [linx]|
+|3|![pat03](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-03.JPG)|1. Peak time: around 5:30 am and 8:30 pm;<br> 2. Off-peak time: around 4:30 pm; <br> 3. Valley-to-peak ratio: 0.04;<br> 4. Bursty traffic with two major peaks in a day;<br> 5. URL: [linx]|
 |4|![pat04](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-04.JPG)|1. Peak time: around 10:00 pm;<br>  
-2. Off-peak time: around 4:30 am; <br> 
-3. Valley-to-peak ratio: 0.16;<br> 
-4. From valley to peak, traffic first increases fast and then slowly; from peak to valley, it decreases sharply;<br> 
-5. URL: [ams-ix-grx]|
+2. Off-peak time: around 4:30 am; <br> 3. Valley-to-peak ratio: 0.16;<br> 4. From valley to peak, traffic first increases fast and then slowly; from peak to valley, it decreases sharply;<br> 5. URL: [ams-ix-grx]|
 |5|![pat05](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-05.JPG)|1. Peak time: around 2:00 pm; <br> 
-2. Off-peak time: around 4:00 am; <br> 
-3. Valley-to-peak ratio: 0.20;<br> 
-4. Bursty traffic with major peaks occurring randomly in a day;<br> 
-5. URL: [ams-ix-nbip]|
+2. Off-peak time: around 4:00 am; <br> 3. Valley-to-peak ratio: 0.20;<br> 4. Bursty traffic with major peaks occurring randomly in a day;<br> 5. URL: [ams-ix-nbip]|
 |6|![pat06](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-06.JPG)|1. Peak time: around 9:00 am;<br>  
-2. Off-peak time: around 4:00 am; <br> 
-3. Valley-to-peak ratio: 0.42;<br> 
-4. Traffic slowly increases for around 18 hours and then decreases sharply for around 6 hours;<br> 
-5. URL: [ams-ix-ipv6]|
+2. Off-peak time: around 4:00 am; <br> 3. Valley-to-peak ratio: 0.42;<br> 4. Traffic slowly increases for around 18 hours and then decreases sharply for around 6 hours;<br> 5. URL: [ams-ix-ipv6]|
 |7|![pat07](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-07.JPG)|1. Peak time: around 2:00 pm;<br>  
-2. Off-peak time: around 5:00 am; <br> 
-3. Valley-to-peak ratio: 0.3;<br> 
-4. Traffic slowly increases for around 17 hours and then decreases sharply for around 7 hours; <br> 
-5. URL: [SwissiX]|
+2. Off-peak time: around 5:00 am; <br> 3. Valley-to-peak ratio: 0.3;<br> 4. Traffic slowly increases for around 17 hours and then decreases sharply for around 7 hours; <br> 5. URL: [SwissiX]|
 |8|![pat08](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-08.JPG)|1. Peak time: around 9:00 am; <br> 
-2. Off-peak time: around 2:00 pm; <br> 
-3. Valley-to-peak ratio: 0.8; <br> 
-4. Traffic slowly increases for around 15 hours and then decreases sharply for around 7 hours;<br> 
-5. URL: [bcix]|
+2. Off-peak time: around 2:00 pm; <br> 3. Valley-to-peak ratio: 0.8; <br> 4. Traffic slowly increases for around 15 hours and then decreases sharply for around 7 hours;<br> 5. URL: [bcix]|
 |9|![pat09](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-09.JPG)|1. Peak time: around 4:00 pm; <br> 
-2. Off-peak time: around 4:00 am; <br> 
-3. Valley-to-peak ratio: 0.5; <br> 
-4. Traffic stay steady throughout a day with one valley;<br> 
-5. URL: [nyiix-NY]|
+2. Off-peak time: around 4:00 am; <br> 3. Valley-to-peak ratio: 0.5; <br> 4. Traffic stay steady throughout a day with one valley;<br> 5. URL: [nyiix-NY]|
 |10|![pat10](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-10.JPG)|1. Peak time: around 9:00 am; <br> 
-2. Off-peak time: around 4:00 am; <br> 
-3. Valley-to-peak ratio: 0.6; <br> 
-4. Traffic stay steady throughout a day with two minor peaks;<br> 
-5. URL: [nyiix-LA]|
+2. Off-peak time: around 4:00 am; <br> 3. Valley-to-peak ratio: 0.6; <br> 4. Traffic stay steady throughout a day with two minor peaks;<br> 5. URL: [nyiix-LA]|
 |11|![pat11](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-11.JPG)|1. Peak time: around 10:00 pm; <br> 
-2. Off-peak time: around 4:00 am; <br> 
-3. Valley-to-peak ratio: 0.27; <br> 
-4. Traffic fluctuates largely throughout a day and stays at a high level for over 17 hours;<br> 
-5. URL: [cuhk]|
+2. Off-peak time: around 4:00 am; <br> 3. Valley-to-peak ratio: 0.27; <br> 4. Traffic fluctuates largely throughout a day and stays at a high level for over 17 hours;<br> 5. URL: [cuhk]|
 |12|![pat12](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-12.JPG)|1. Peak time: around 9:00 pm; <br> 
-2. Off-peak time: around 5:00 am; <br> 
-3. Valley-to-peak ratio: 0.29; <br> 
-4. When traffic increasing, it stays at a flat level for a while and small spikes happens randomly; <br> 
-5. URL: [lonap]|
+2. Off-peak time: around 5:00 am; <br> 3. Valley-to-peak ratio: 0.29; <br> 4. When traffic increasing, it stays at a flat level for a while and small spikes happens randomly; <br> 5. URL: [lonap]|
 |13|![pat13](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-13.JPG)|1. Peak time: around 10:00 pm; <br> 
-2. Off-peak time: around 6:00 am; <br> 
-3. Valley-to-peak ratio: 0.60; <br> 
-4. Small and sudden increases occur before traffic reaches its valley;<br> 
-5. URL: [n-ix]|
+2. Off-peak time: around 6:00 am; <br> 3. Valley-to-peak ratio: 0.60; <br> 4. Small and sudden increases occur before traffic reaches its valley;<br> 5. URL: [n-ix]|
 |14|![pat14](https://github.com/lsq93325/Traffic-creation/raw/master/image/pattern-14.JPG)|1. Peak time: around 3:00 pm; <br> 
-2. Off-peak time: around 4:00 am; <br> 
-3. Valley-to-peak ratio: 0.40; <br> 
-4. Traffic has three major peaks, which stay close to each other;<br> 
-5. URL: [USTC]|
+2. Off-peak time: around 4:00 am; <br> 3. Valley-to-peak ratio: 0.40; <br> 4. Traffic has three major peaks, which stay close to each other;<br> 5. URL: [USTC]|
 
 ## Generate Data Set to Emulate Backbone Traffic
 The realistic traffic traces above indicate that the aggregated traffic collected at an edge route experience daily fluctuation, but the fluctuation patterns of the traces may have negative correlation, i.e., the peak time of a trace is the off-peak time of another one, and vice versa. Furthermore, the negative correlation can also be caused by the fact that a backbone network covers multiple time-zones geographically, and traffic flows between different source-destination pairs might have different peak/off-peak hours \[1\]
