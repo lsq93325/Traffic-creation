@@ -40,7 +40,7 @@ All the realistic traffic traces considered in this report has relatively strong
 |14|![pat14](https://github.com/lsq93325/Traffic-creation/raw/master/image/w14.JPG)|1. Valley-to-peak ratio: 0.40; <br> 2. Traffic has three major peaks, which stay close to each other;<br> 3. URL: [USTC]|
 
 ## Generate Data Set to Emulate Backbone Traffic
-The realistic traffic traces above indicate that the aggregated traffic collected at an edge route experience daily fluctuation, but the fluctuation patterns of the traces may have negative correlation, i.e., the peak time of a trace is the off-peak time of another one, and vice versa. Furthermore, the negative correlation can also be caused by the fact that a backbone network covers multiple time-zones geographically, and traffic flows between different source-destination pairs might have different peak/off-peak hours \[2\]
+The realistic traffic traces above indicate that the aggregated traffic collected at an edge route experience daily fluctuation, but the fluctuation patterns of the traces may have negative correlation, i.e., the peak time of a trace is the off-peak time of another one, and vice versa. Furthermore, the negative correlation can also be caused by the fact that a backbone network covers multiple time-zones geographically, and traffic flows between different source-destination pairs might have different peak/off-peak hours \[2\].
 
 For the 14 traces mentioned above, we use the following procedure to generate the data set to emulate dynamic traffic on aggregated flows in a backbone IP over optical network.
 
