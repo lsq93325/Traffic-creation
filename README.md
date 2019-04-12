@@ -24,7 +24,7 @@ All the realistic traffic traces considered in this report has relatively strong
 
 | ID  |  Traffic Pattern | Features |
 | :--------| :---------------: | :--------|
-|1| ![pat01](https://github.com/lsq93325/Traffic-creation/raw/master/image/w01.JPG)| 1. Valley / Peak = 0.25; <br> 2. Some days experience sharp peak while some not;<br> 3. URL: [linx]|
+|1| ![pat01](https://github.com/lsq93325/Traffic-creation/raw/master/image/w01.JPG)| 1. Valley-to-peak ratio: 0.25; <br> 2. Some days experience sharp peak while some not;<br> 3. URL: [linx]|
 |2|![pat02](https://github.com/lsq93325/Traffic-creation/raw/master/image/w02.JPG)|1. Valley-to-peak ratio: 0.4;<br> 2. For some days, they slowly reach the peak and drop fast afterward while others reach to a high-level and stay for several hours; <br> 3. URL: [linx]|
 |3|![pat03](https://github.com/lsq93325/Traffic-creation/raw/master/image/w03.JPG)|1. Valley-to-peak ratio: 0.04;<br> 2. Bursty traffic in a day and some time experience more than one peak;<br> 3. URL: [linx]|
 |4|![pat04](https://github.com/lsq93325/Traffic-creation/raw/master/image/w04.JPG)|1. Valley-to-peak ratio: 0.16;<br> 2. From valley to peak, traffic first increases fast and then slowly; from peak to valley, it decreases sharply;<br> 3.In some days peak hour is in the afternoon and the rest in the evening; <br> 4. URL: [ams-ix-grx]|
