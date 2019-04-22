@@ -48,7 +48,7 @@ For the 14 traces mentioned above, we use the following procedure to generate th
 2.	For the data set to represent the traffic of an aggregated flow, we randomly choose sample segments from 5 to 10 preprocessed traces, multiply each of them by a random weight in (0, 1), shift the weighted samples in the time domain for \[0, 6\] hours randomly (to emulate traffic from different time-zones), and add the results together and normalize them to obtain a segment of the traffic on an aggregated flow. Then, we repeat the procedure to get the whole traffic data of an aggregated flow, which consists of 50,000 traffic samples.
 3.	We repeat Step 2 for 10 times to generate the traffic traces for 10 aggregated flows in a backbone IP over optical network, which includes 500,000 traffic samples in total.
 
-The generated traffic data set is attached, and an example on the generated traffic is shown in the figure below.
+The generated traffic data set stored in a Matlab .mat file is attached [Here], and an example on the generated traffic is shown in the figure below.
 
 ## References:
 
@@ -72,3 +72,4 @@ The generated traffic data set is attached, and an example on the generated traf
 [ams-ix-ipv6]: https://stats.ams-ix.net/sflow/index.html
 [USTC]: http://202.38.64.40/cgi-bin/mrtg-rrd-1000g.cgi/
 [Paper]: https://dl.acm.org/citation.cfm?id=505209
+[Here]: 
