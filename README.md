@@ -50,6 +50,9 @@ For the 14 traces mentioned above, we use the following procedure to generate th
 
 The generated traffic data set stored in a Matlab .mat file is attached [Here], and an example on the generated traffic is shown in the figure below.
 
+![TrafficExample](https://github.com/lsq93325/Traffic-creation/raw/master/image/TrafficExample.jpg)
+
+
 ## References:
 
 \[1\] S. Bhattacharyya, C. Diot, and J. Jetcheva, “Pop-level and access-link-level traffic dynamics in a Tier-1 POP,” in Proc. of ACM SIGCOMM IMW 2001, pp. 39–53, Nov. 2001.<br>
